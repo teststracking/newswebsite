@@ -21,8 +21,11 @@
 
     <h1>Teste de GTM</h1>
     <p>Vamos testar algumas implementações!</p>
-    <button type="button" class="clickHere" id="helloThere" onclick="dlpushButtonClick()">
-        <span>Hello There</span>
+    <button type="button" class="clickHere" id="helloThere">
+        <span>Hello There sem DL</span>
+      </button>
+    <button type="button" onclick="dlpushButtonClick()">
+        <span>Hello There com DL</span>
       </button>
       <script>
         //funções e DL
@@ -31,7 +34,7 @@
             window.dataLayer.push({
                 'event': 'buttonClick',
                 'param1': 'Hello There',
-                'param2': 'value2'
+                'param2': 'dataLayer'
             });
         }
       </script>
